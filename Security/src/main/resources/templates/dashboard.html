@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h2>Dashboard</h2>
+<p>Welcome to the dashboard!</p>
+<div>
+    <a th:href="@{/users}">Manage Users</a> |
+    <a th:href="@{/categories}">Manage Categories</a> |
+    <a th:href="@{/products}">Manage Products</a> |
+    <a th:href="@{/brands}">Manage Brands</a> |
+    <a th:href="@{/orders}">Manage Orders</a> |
+    <a th:href="@{/posts}">Manage Posts</a>   |
+    <a th:href="@{/profile}">Manage Profile</a>
+</div>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

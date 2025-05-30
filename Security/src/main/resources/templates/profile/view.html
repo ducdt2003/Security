@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h2>Profile</h2>
+<p>Username: <span th:text="${user != null ? user.username : 'Không có người dùng'}">User</span></p>
+<p>Role: <span th:text="${user != null ? user.authorities[0].authority : 'Không có vai trò'}">USER</span></p>
+<a th:href="@{/profile/edit}">Edit Profile</a>
+<a th:href="@{/logout}" style="margin-left: 20px;">Logout</a>
+</body>
+</html>
